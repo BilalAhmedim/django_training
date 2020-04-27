@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if 'home' in title %}{{ title }}{% endif %}</title>
+</head>
+<body>
+{% include 'NavBar.html' %}
+{{ html|safe }}
+<ul>
+    {% if boolean == True %}
+        {% for mylist in list %}
+            <li>{{ mylist }}</li>
+        {% endfor %}
+    {% endif %}
+</ul>
+{% block Content %}
+{% endblock %}
+</body>
+</html>
